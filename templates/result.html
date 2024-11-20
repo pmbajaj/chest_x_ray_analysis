@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Prediction Result{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-lg border-0">
+            <div class="card-body p-5">
+                <h3 class="card-title text-center mb-4">Prediction Result</h3>
+
+                <p class="text-center display-4 {% if result == 'Pneumonia' %}text-danger{% else %}text-success{% endif %}">
+                    {{ result }}
+                </p>
+
+                {% if result == 'Pneumonia' %}
+                    <div class="alert alert-danger mt-4">
+                        <h5>About Pneumonia:</h5>
+                        <p>Pneumonia is an infection that inflames the air sacs in one or both lungs. These air sacs may fill with fluid or pus, causing symptoms such as cough, fever, chills, and difficulty breathing.</p>
+                    </div>
+                    <p class="text-center text-muted">⚠ This prediction suggests signs of pneumonia. Please consult a healthcare professional for a comprehensive diagnosis.</p>
+                {% else %}
+                    <div class="alert alert-success mt-4">
+                        <h5>About Normal Findings:</h5>
+                        <p>The uploaded X-ray image does not show obvious signs of pneumonia. However, this is an automated analysis and may not capture all subtleties.</p>
+                    </div>
+                    <p class="text-center text-muted">✔ The image analysis did not detect pneumonia. If you have any health concerns, please consult a medical professional.</p>
+                {% endif %}
+
+                <div class="text-center mt-4">
+                    <a href="/" class="btn btn-outline-secondary">Upload Another Image</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

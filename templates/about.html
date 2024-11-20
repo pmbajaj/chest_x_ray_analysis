@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}About the Developer{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-lg border-0">
+            <div class="card-body p-5">
+                <h3 class="card-title text-center mb-4">About the Developer</h3>
+
+                <p>Hello! I'm a final-year B-Tech Computer Science student with a strong passion for machine learning, artificial intelligence, and software development. I've developed this X-Ray Image Classification project to demonstrate how deep learning can be applied in medical imaging, specifically in classifying X-ray images to assist in identifying health conditions.</p>
+
+                <h4>My Skills</h4>
+                <p>Over the course of my studies and projects, I have acquired a diverse set of skills in programming and web development:</p>
+                <ul>
+                    <li><strong>Programming Languages:</strong> Proficient in Java, Python, and MySQL.</li>
+                    <li><strong>Data Structures & Algorithms:</strong> Experience in implementing efficient algorithms to optimize code and handle large datasets.</li>
+                    <li><strong>Web Development:</strong> Skilled in front-end and back-end development with React, CSS, and Flask to build user-friendly applications.</li>
+                    <li><strong>Machine Learning & Data Analysis:</strong> Knowledgeable in Python-based libraries such as PyTorch, scikit-learn, and TensorFlow for building and deploying machine learning models.</li>
+                </ul>
+
+                <h4>About This Project</h4>
+                <p>This X-Ray Image Classifier is a machine learning model aimed at classifying X-ray images into two categories: <strong>Normal</strong> and <strong>Pneumonia</strong>. The model uses a Convolutional Neural Network (CNN) to extract features from images and provide a prediction based on the patterns recognized in the training data.</p>
+
+                <h5>Technologies Used:</h5>
+                <ul>
+                    <li><strong>Python:</strong> The main language used for developing the model and application logic.</li>
+                    <li><strong>PyTorch:</strong> Utilized for building, training, and testing the CNN model.</li>
+                    <li><strong>Flask:</strong> Serves as the web framework for hosting the application and handling user requests.</li>
+                    <li><strong>SQLAlchemy and SQLite:</strong> Used for database management, storing user contact messages securely within the app.</li>
+                    <li><strong>Bootstrap:</strong> Ensures a responsive and user-friendly interface.</li>
+                </ul>
+
+                <h4>Project Highlights</h4>
+                <p>Some unique aspects of this project:</p>
+                <ul>
+                    <li><strong>Cross-Validation:</strong> To ensure robustness, the model was trained with cross-validation, leveraging multiple folds to find the best performance metrics.</li>
+                    <li><strong>Imbalanced Dataset Handling:</strong> Techniques like weighted sampling were applied to address class imbalance in the dataset, ensuring the model performs well across both categories.</li>
+                    <li><strong>Deployment and Accessibility:</strong> Developed with user accessibility in mind, allowing users to upload their X-ray images and receive predictions with a simple interface.</li>
+                </ul>
+
+                <h4>Contact</h4>
+                <p>If you have any questions or would like to learn more about my work, please feel free to reach out via the <a href="{{ url_for('contact') }}">Contact</a> page. I'd love to connect!</p>
+
+                <div class="text-center mt-4">
+                    <a href="/" class="btn btn-outline-primary">Go Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

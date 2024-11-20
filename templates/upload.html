@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Upload X-Ray Image{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-lg border-0">
+            <div class="card-body p-5">
+                <h3 class="card-title text-center mb-4">Upload X-Ray Image</h3>
+
+                <!-- Display any flash messages -->
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                  {% if messages %}
+                    {% for category, message in messages %}
+                      <div class="alert alert-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                  {% endif %}
+                {% endwith %}
+
+                <form method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <input type="file" name="file" accept="image/*" class="form-control-file" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Upload & Predict</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
