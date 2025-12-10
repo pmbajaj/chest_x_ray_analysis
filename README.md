@@ -88,10 +88,10 @@ Deployment on cloud platforms like AWS or Heroku.
 
 Developer
 
-This project is developed by Piyush Mangalam Bajaj, a final-year Computer Science student passionate about deep learning and its applications in healthcare.
+This project is developed by Piyush Mangalam Bajaj and Himanshu Mishra, final-year Computer Science students passionate about deep learning and its applications in healthcare.
 
-LinkedIn: https://www.linkedin.com/in/piyush-mangalam-bajaj-6a995a236/
-
+LinkedIn (Piyush): https://www.linkedin.com/in/piyush-mangalam-bajaj-6a995a236/
+LinkedIn (Himanshu): https://www.linkedin.com/in/him234/
 License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
